@@ -1,0 +1,22 @@
+{
+  "id": 0,
+  "name": "string",
+  "description": "string",
+  "price": 0,
+  "pictureFileName": "string",
+  "pictureUri": "string",
+  "catalogTypeId": 0,
+  "catalogType": {
+      "id": 0,
+      "type": "string"
+  },
+  "catalogBrandId": 0,
+  "catalogBrand": {
+      "id": 0,
+      "brand": "string"
+  },
+  "availableStock": 0,
+  "restockThreshold": 0,
+  "maxStockThreshold": 0,
+  "onReorder": true
+}
