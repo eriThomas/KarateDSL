@@ -1,18 +1,18 @@
-package examples;
+package test.java;
 
-import com.intuit.karate.Results;
-import com.intuit.karate.Runner;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-class ExamplesTest {
+public class TestRunner extends BaseRunner {
+
+    static String basePath = "classpath:test/java";
+
+    String projName = "Users";
+    String featurePath = "examples/users";
+    String executeTags = "@EXECUTE";
+    int parallelExec = 1;
 
     @Test
-    void testParallel() {
-        Results results = Runner.path("classpath:examples")
-                //.outputCucumberJson(true)
-                .parallel(5);
-        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+    public void testParallel() {
+        super.testParallel(basePath + featurePath, executeTags, parallelExec, projName);
     }
-
 }
